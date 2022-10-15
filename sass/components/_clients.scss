@@ -1,0 +1,28 @@
+// .clients {
+//   display: flex;
+//   margin-top: 0;
+//   margin-bottom: 0;
+
+//   &__logo:not(:last-child) {
+//     margin-right: 30px;
+//   }
+
+//   &__link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 170px;
+//     height: 92px;
+//     border: 1px solid var(--icon-social-first);
+//     border-radius: 4px;
+//     fill: var(--icon-social-first);
+//     transition: border-color var(--time-animation) var(--cubic),
+//       fill var(--time-animation) var(--cubic);
+
+//     &:focus,
+//     &:hover {
+//       border-color: var(--accent-color);
+//       fill: var(--accent-color);
+//     }
+//   }
+// }
