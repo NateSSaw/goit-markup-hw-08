@@ -5,21 +5,34 @@ footer {
 }
 
 .footer.container {
-  //   @media screen and (max-width: 767px) {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //   }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.block-contacts {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 96px;
+  }
 
   @include desktop {
     display: flex;
     align-items: baseline;
+    margin-bottom: 0;
+    margin-right: 93px;
   }
 }
 .footer-contact {
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
+  }
+
+  @include desktop {
+    margin-right: 70px;
   }
 }
 
@@ -87,10 +100,6 @@ footer {
 }
 
 .block-social {
-  @include desktop {
-    margin-left: 70px;
-  }
-
   &__title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -148,7 +157,6 @@ footer {
   @include desktop {
     justify-content: baseline;
     align-items: flex-end;
-    margin-left: 93px;
 
     width: 570px;
     height: 86px;
@@ -184,6 +192,7 @@ footer {
     display: block;
     max-width: 450px;
     height: 50px;
+    padding: 15px 16px;
 
     border: 1px solid var(--border-footer-form);
     border-radius: 4px;
@@ -195,9 +204,14 @@ footer {
     @include mobile {
       margin-bottom: 20px;
     }
+
+    @include tablet {
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+    }
     @include desktop {
-      max-width: 358px;
-      padding: 15px 16px;
+      width: 358px;
     }
     &:placeholder-shown {
       font-size: 16px;
