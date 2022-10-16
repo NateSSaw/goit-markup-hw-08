@@ -231,9 +231,29 @@ footer {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-contact,
+.block-social {
+    margin-bottom: 60px;
+  }
+}
+
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    text-align: left;
+  }
 }
 .logo-footer__first-part {
   color: var(--accent-color);
@@ -248,8 +268,20 @@ footer {
   font-style: normal;
   line-height: 1.71;
 }
+@media screen and (max-width: 767px) {
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer-contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 .footer-contacts__link.map {
   color: var(--focus-color);
@@ -278,6 +310,7 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--focus-color);
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .block-social__title {
@@ -287,7 +320,16 @@ footer {
 
 .social-pages {
   display: flex;
-  margin: 0;
+}
+@media screen and (min-width: 480px) {
+  .social-pages {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social-pages {
+    margin: 0;
+  }
 }
 .social-pages__item:not(:last-child) {
   margin-right: 10px;
@@ -306,6 +348,12 @@ footer {
   background-color: var(--accent-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .block-subscription {
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .block-subscription {
     justify-content: baseline;
@@ -322,6 +370,12 @@ footer {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--focus-color);
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .block-subscription__title {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -336,6 +390,8 @@ footer {
 }
 .subscription__input {
   display: block;
+  max-width: 450px;
+  height: 50px;
   border: 1px solid var(--border-footer-form);
   border-radius: 4px;
   outline: none;
@@ -343,10 +399,14 @@ footer {
   color: var(--focus-color);
   transition: border-color var(--time-animation) var(--cubic);
 }
+@media screen and (min-width: 480px) {
+  .subscription__input {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .subscription__input {
-    width: 358px;
-    height: 50px;
+    max-width: 358px;
     padding: 15px 16px;
   }
 }
@@ -374,6 +434,8 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 10px 27px;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 50px;
   border-radius: 4px;
