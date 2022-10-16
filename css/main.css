@@ -450,7 +450,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .staff__card {
-    width: 354px;
+    width: calc((100% - 60px) / 2);
     margin: 15px;
   }
 }
@@ -512,4 +512,48 @@ ul {
 .social-media__link:hover, .social-media__link:focus {
   background-color: var(--accent-color);
   fill: var(--focus-color);
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 480px) {
+  .clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .clients__logo {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__logo {
+    width: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__logo {
+    width: calc((100% - 180px) / 6);
+  }
+}
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border: 1px solid var(--icon-social-first);
+  border-radius: 4px;
+  fill: var(--icon-social-first);
+  transition: border-color var(--time-animation) var(--cubic), fill var(--time-animation) var(--cubic);
+}
+.clients__link:focus, .clients__link:hover {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */

@@ -30,19 +30,13 @@
       }
     }
     @include tablet {
-      width: calc((768px - 2 * 30px) / 2);
+      width: calc((100% - 2 * 30px) / 2);
       margin: 15px;
     }
 
     @include desktop {
       width: calc((100% - 4 * 30px) / 4);
     }
-
-    // &:not(:first-child) {
-    //   @include desktop {
-    //     margin-left: 30px;
-    //   }
-    // }
   }
 
   &__photo {

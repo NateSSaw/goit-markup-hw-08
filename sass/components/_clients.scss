@@ -1,28 +1,51 @@
-// .clients {
-//   display: flex;
-//   margin-top: 0;
-//   margin-bottom: 0;
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
 
-//   &__logo:not(:last-child) {
-//     margin-right: 30px;
-//   }
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
-//   &__link {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 170px;
-//     height: 92px;
-//     border: 1px solid var(--icon-social-first);
-//     border-radius: 4px;
-//     fill: var(--icon-social-first);
-//     transition: border-color var(--time-animation) var(--cubic),
-//       fill var(--time-animation) var(--cubic);
+  &__logo {
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
 
-//     &:focus,
-//     &:hover {
-//       border-color: var(--accent-color);
-//       fill: var(--accent-color);
-//     }
-//   }
-// }
+    // @include mobile {
+    //   width: calc((100% - 2 * 30px) / 2);
+    //   margin: 15px;
+    // }
+
+    @include tablet {
+      width: calc((100% - 3 * 30px) / 3);
+    }
+
+    @include desktop {
+      width: calc((100% - 6 * 30px) / 6);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 92px;
+    border: 1px solid var(--icon-social-first);
+    border-radius: 4px;
+    fill: var(--icon-social-first);
+    transition: border-color var(--time-animation) var(--cubic),
+      fill var(--time-animation) var(--cubic);
+
+    &:focus,
+    &:hover {
+      border-color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+}
