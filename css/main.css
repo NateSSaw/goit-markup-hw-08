@@ -269,6 +269,10 @@ ul {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-desk-2x.jpg);
   }
 }
+.hero__container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .hero__title {
   max-width: 360px;
   margin-top: 0;
@@ -427,9 +431,10 @@ ul {
 @media screen and (min-width: 768px) {
   .staff {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
     align-items: center;
     justify-content: center;
-    margin: -15px;
   }
 }
 .staff__card {
@@ -445,7 +450,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .staff__card {
-    width: calc((100% - 60px) / 2);
+    width: 354px;
     margin: 15px;
   }
 }
