@@ -43,7 +43,7 @@
   background-color: transparent;
   fill: var(--logo-header-color);
 
-  z-index: 5;
+  z-index: 10;
 
   transition: fill var(--time-animation) var(--cubic);
 
@@ -78,12 +78,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 48px 25px;
+  padding: 10px 15px 48px 40px;
   background-color: var(--focus-color);
   min-height: 796px;
 
   &.is-open {
     display: block;
+  }
+
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
   }
 }
 
@@ -91,6 +98,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 48px 83px 48px 40px;
   margin-bottom: 306px;
 
   @include tablet {
@@ -160,7 +168,7 @@
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 64px;
+    padding-left: 40px;
   }
 
   &__item {
@@ -232,7 +240,10 @@
 .social-networks {
   @media screen and (max-width: 767px) {
     display: flex;
+    // flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
   }
 
   @include tablet {
@@ -245,12 +256,20 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+
+    &:not(:first-child) {
+      padding-right: 10px;
+    }
     &:not(:last-child) {
       padding-right: 10px;
+      margin-right: 10px;
       border-right: 1px solid var(--border-form-modal);
     }
-    &:not(:first-child) {
-      padding-left: 10px;
-    }
+  }
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+  }
+  @include mobile {
+    width: 357px;
   }
 }
