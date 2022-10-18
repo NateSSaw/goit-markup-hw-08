@@ -20,7 +20,7 @@
   <body>
     <!--Шапка-->
     <header class="header">
-      <div class="site-header container">
+      <div class="site-header">
         <a href="./index.html" class="logo">
           <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
         </a>
@@ -31,19 +31,9 @@
           aria-controls="menu-container"
           data-menu-button
         >
-          <svg aria-label="Перемикач основного меню">
-            <use
-              href="./images/sprite.svg#icon-menu"
-              width="24"
-              height="24"
-              class="icon-menu"
-            ></use>
-            <use
-              href="./images/sprite.svg#icon-close-menu"
-              width="19"
-              height="19"
-              class="icon-close"
-            ></use>
+          <svg width="40" height="40" aria-label="Перемикач основного меню">
+            <use href="./images/sprite.svg#icon-menu" class="icon-menu"></use>
+            <use href="./images/sprite.svg#icon-close-menu" class="icon-close"></use>
           </svg>
         </button>
 
@@ -61,21 +51,27 @@
           </nav>
           <ul class="contacts list">
             <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="contacts__link"
-                ><svg width="16" height="12">
+              <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--mail"
+                ><svg width="16" height="12" class="contacts__icon">
                   <use href="./images/sprite.svg#icon-messages"></use>
                 </svg>
                 info@devstudio.com</a
               >
             </li>
             <li class="contacts__item">
-              <a href="tel:+380961111111" class="contacts__link">
-                <svg width="10" height="16">
+              <a href="tel:+380961111111" class="contacts__link contacts__link--mobile">
+                <svg width="10" height="16" class="contacts__icon">
                   <use href="./images/sprite.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
+          </ul>
+          <ul class="social-networks">
+            <li class="social-networks__item">Instagram</li>
+            <li class="social-networks__item">Twitter</li>
+            <li class="social-networks__item">Facebook</li>
+            <li class="social-networks__item">LinkedIn</li>
           </ul>
         </div>
       </div>
