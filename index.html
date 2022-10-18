@@ -24,14 +24,30 @@
         <a href="./index.html" class="logo">
           <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
         </a>
-        <button type="button" class="header__button" aria-expanded="false">
-          <svg width="40" height="40" aria-label="Перемикач основного меню">
-            <use href="./images/sprite.svg#icon-menu" class="icon-menu" js-open-menu></use>
-            <use href="./images/sprite.svg#icon-close-menu" class="icon-close" js-close-menu></use>
+        <button
+          type="button"
+          class="header__button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg aria-label="Перемикач основного меню">
+            <use
+              href="./images/sprite.svg#icon-menu"
+              width="24"
+              height="24"
+              class="icon-menu"
+            ></use>
+            <use
+              href="./images/sprite.svg#icon-close-menu"
+              width="19"
+              height="19"
+              class="icon-close"
+            ></use>
           </svg>
         </button>
 
-        <div class="menu" js-menu-container>
+        <div class="menu" id="menu-container" data-menu>
           <nav>
             <ul class="navigation list">
               <li class="navigation__item">
@@ -576,7 +592,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

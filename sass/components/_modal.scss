@@ -11,6 +11,8 @@
   transition: opacity var(--time-animation) var(--cubic),
     visibility var(--time-animation) var(--cubic);
 
+  overflow-y: scroll;
+
   &__button {
     position: absolute;
     top: 8px;
