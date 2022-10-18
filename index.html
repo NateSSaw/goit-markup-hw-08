@@ -141,33 +141,44 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="services">
             <li class="services__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Програмування"
-                width="370"
-                height="294"
-                class="services__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/img-1-desk-1x.jpg 1x,
+                    ./images/img-1-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/img-1-desk-1x.jpg" alt="Програмування"
+                class="services__image"/>
+              </picture>
               <h3 class="services__title">Десктопні додатки</h3>
             </li>
             <li class="services__item">
-              <img
-                src="./images/img2.jpg"
-                alt="Розробка мобільних додатків"
-                width="370"
-                height="294"
-                class="services__image"
-              />
-              <h3 class="services__title">Мобільні додатки</h3>
+              <picture>
+                <source
+                  srcset="
+                    ./images/img-2-desk-1x.jpg 1x,
+                    ./images/img-2-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/img-2-desk-1x.jpg" alt="Розробка мобільних додатків"
+                class="services__image"/>
+              </picture>
+                           <h3 class="services__title">Мобільні додатки</h3>
             </li>
-            <li class="services__item">
-              <img
-                src="./images/img3.jpg"
-                alt="Графічний дизайн"
-                width="370"
-                height="294"
-                class="services__image"
-              />
+             <picture>
+                <source
+                  srcset="
+                    ./images/img-3-desk-1x.jpg 1x,
+                    ./images/img-3-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src=" ./images/img-3-desk-1x.jpg alt="Графічний дизайн"
+                class="services__image"/>
+              </picture>
               <h3 class="services__title">Дизайнерські рішення</h3>
             </li>
           </ul>
