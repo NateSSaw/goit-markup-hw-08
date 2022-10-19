@@ -13,10 +13,17 @@
     justify-content: center;
   }
   @include tablet {
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
     min-height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  }
+  @include desktop {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .logo,
@@ -86,6 +93,13 @@
   }
 
   @include tablet {
+    // display: flex;
+    // justify-content: space-between;
+  }
+}
+
+.header-nav {
+  @include tablet {
     display: flex;
     justify-content: space-between;
   }
@@ -102,13 +116,22 @@
   @include tablet {
     display: flex;
     justify-content: center;
-    margin-left: 93px;
+    margin-left: 88px;
+    margin-right: 90px;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
+  @include desktop {
+    margin-left: 93px;
+    margin-right: 315px;
+  }
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 
-    @include tablet {
+  @include tablet {
+    &__item:not(:last-child) {
       margin-bottom: 0;
       margin-right: 50px;
     }
@@ -132,7 +155,6 @@
       padding-top: 32px;
       padding-bottom: 32px;
       margin: 0;
-
       font-size: 14px;
       line-height: 1.14;
     }
@@ -164,10 +186,16 @@
   }
 }
 
-.contacts {
+.header-nav .contacts {
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 21px;
   }
 
   &__item {
@@ -176,14 +204,20 @@
         margin-bottom: 32px;
       }
     }
+    @media screen and (max-width: 1199px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
+
   @include desktop {
     display: flex;
     margin-left: auto;
 
-    &__item:nth-child(2) {
-      margin-left: 50px;
-    }
+    // &__item:nth-child(2) {
+    //   margin-left: 50px;
+    // }
   }
 
   &__link {
@@ -215,12 +249,22 @@
         letter-spacing: 0.02em;
         color: var(--accent-color);
       }
-      @include mobile {
+      @media screen and (max-width: 767px) {
         font-weight: 500;
         font-size: 34px;
         line-height: 1.18;
         letter-spacing: 0.02em;
         color: var(--accent-color);
+      }
+      @include tablet {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--primary-text-color);
+        transition: color var(--time-animation) var(--cubic),
+          fill var(--time-animation) var(--cubic);
       }
     }
     &--mail {
@@ -232,12 +276,29 @@
         line-height: 1.17;
         letter-spacing: 0.02em;
       }
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 1.17;
+      }
     }
   }
 
   &__icon {
     @media screen and (max-width: 767px) {
       display: none;
+    }
+    &--message {
+      @include tablet {
+        width: 14px;
+        height: 10px;
+      }
+    }
+    &--tel {
+      @include tablet {
+        width: 10px;
+        height: 14px;
+      }
     }
   }
 }
