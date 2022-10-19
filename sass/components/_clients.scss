@@ -10,16 +10,15 @@
     margin: -15px;
   }
 
+  @include desktop {
+    margin: 0;
+  }
+
   &__logo {
     @media screen and (max-width: 767px) {
       width: calc((100% - 2 * 30px) / 2);
       margin: 15px;
     }
-
-    // @include mobile {
-    //   width: calc((100% - 2 * 30px) / 2);
-    //   margin: 15px;
-    // }
 
     @include tablet {
       width: calc((100% - 3 * 30px) / 3);
@@ -27,8 +26,20 @@
     }
 
     @include desktop {
-      width: calc((100% - 6 * 30px) / 6);
-      margin: 15px;
+      width: calc((100% - 5 * 30px) / 6);
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    @include desktop {
+      &:last-child {
+        margin-right: 0px;
+      }
     }
   }
 

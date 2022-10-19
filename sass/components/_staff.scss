@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: center;
   }
+  @include desktop {
+    margin: 0;
+  }
 
   &__card {
     width: 100%;
@@ -35,7 +38,21 @@
     }
 
     @include desktop {
-      width: calc((100% - 4 * 30px) / 4);
+      width: calc((100% - 3 * 30px) / 4);
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    @include desktop {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    @include desktop {
+      &:last-child {
+        margin-right: 0px;
+      }
     }
   }
 
