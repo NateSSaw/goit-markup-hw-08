@@ -368,13 +368,18 @@ ul {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
+@media screen and (min-width: 768px) {
+  .header-nav .contacts__link {
+    gap: 8px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header-nav .contacts__link {
     display: flex;
     align-items: center;
-    gap: 10px;
     padding-top: 32px;
     padding-bottom: 32px;
+    gap: 10px;
   }
 }
 @media screen and (min-width: 320px) {
@@ -445,10 +450,22 @@ ul {
     height: 10px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .header-nav .contacts__icon--message {
+    width: 16px;
+    height: 12px;
+  }
+}
 @media screen and (min-width: 768px) {
   .header-nav .contacts__icon--tel {
     width: 10px;
     height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-nav .contacts__icon--tel {
+    width: 10px;
+    height: 16px;
   }
 }
 

@@ -252,12 +252,15 @@
       color: var(--accent-color);
       fill: var(--accent-color);
     }
+    @include tablet {
+      gap: 8px;
+    }
     @include desktop {
       display: flex;
       align-items: center;
-      gap: 10px;
       padding-top: 32px;
       padding-bottom: 32px;
+      gap: 10px;
     }
 
     &--mobile {
@@ -322,11 +325,19 @@
         width: 14px;
         height: 10px;
       }
+      @include desktop {
+        width: 16px;
+        height: 12px;
+      }
     }
     &--tel {
       @include tablet {
         width: 10px;
         height: 14px;
+      }
+      @include desktop {
+        width: 10px;
+        height: 16px;
       }
     }
   }
