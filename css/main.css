@@ -1528,6 +1528,11 @@ footer {
     margin: 15px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .projects__cards {
+    width: calc((100% - 90px) / 3);
+  }
+}
 .projects__link {
   display: block;
   text-decoration: none;

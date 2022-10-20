@@ -21,6 +21,10 @@
       width: calc((100% - 60px) / 2);
       margin: 15px;
     }
+
+    @include desktop {
+      width: calc((100% - 90px) / 3);
+    }
   }
 
   &__link {
