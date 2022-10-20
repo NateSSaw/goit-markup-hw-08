@@ -1,14 +1,26 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
-  gap: 30px;
-
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: -15px;
+    // align-items: center;
+    // justify-content: center;
+  }
   &__cards {
-    width: calc((100% - 60px) / 3);
+    width: 100%;
     background: var(--focus-color);
+
+    @include tablet {
+      width: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
   }
 
   &__link {
@@ -28,8 +40,12 @@
   }
 
   &__description {
-    padding: 20px 24px;
-    width: 370;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);

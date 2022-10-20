@@ -6,11 +6,17 @@
 }
 
 .filters {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 479px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
   @include tablet {
     display: flex;
     justify-content: center;
@@ -24,6 +30,17 @@
 
   &__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
+    @include tablet {
+      margin-right: 8px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item:nth-child(3) {
+    @media screen and (max-width: 767px) {
+      margin-right: 9px;
+    }
   }
 
   &__button {
@@ -46,6 +63,8 @@
     transition: color var(--time-animation) var(--cubic),
       background-color var(--time-animation) var(--cubic),
       box-shadow var(--time-animation) var(--cubic);
+    @media screen and (max-width: 767px) {
+    }
 
     &:hover,
     &:focus {
@@ -60,5 +79,13 @@
     display: inline-block;
     padding: 6px 25px;
     min-width: 73px;
+    @media screen and (max-width: 767px) {
+      background-color: var(--accent-color);
+      color: var(--focus-color);
+    }
+    @include tablet {
+      background-color: var(--button-portfolio-color);
+      color: var(--title-text-color);
+    }
   }
 }

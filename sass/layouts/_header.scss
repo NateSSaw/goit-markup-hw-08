@@ -125,12 +125,8 @@
   @include tablet {
     display: flex;
     justify-content: center;
-    // margin-right: 90px;
   }
 
-  @include desktop {
-    // margin-right: 315px;
-  }
   @media screen and (max-width: 767px) {
     &__item:not(:last-child) {
       margin-bottom: 32px;
@@ -265,18 +261,19 @@
 
     &--mobile {
       @media screen and (min-width: 320px) {
-        font-size: 28px;
+        font-size: 26px;
         line-height: 1.18;
         letter-spacing: 0.02em;
         color: var(--accent-color);
       }
-      @media screen and (max-width: 767px) {
+      @media screen and (min-width: 480px) {
         font-weight: 500;
         font-size: 34px;
         line-height: 1.18;
         letter-spacing: 0.02em;
         color: var(--accent-color);
       }
+
       @include tablet {
         font-weight: 500;
         font-size: 12px;
@@ -345,14 +342,18 @@
   @include tablet {
     display: none;
   }
-
+  &__item a {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
   &__item {
     @media screen and (min-width: 320px) {
       font-weight: 500;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1.22;
       letter-spacing: 0.02em;
-      color: var(--accent-color);
+
+      text-decoration: none;
     }
     @include mobile {
       font-weight: 500;
@@ -360,9 +361,6 @@
       line-height: 1.22;
       letter-spacing: 0.02em;
       color: var(--accent-color);
-    }
-    &:not(:first-child) {
-      padding-right: 10px;
     }
     &:not(:last-child) {
       padding-right: 10px;
