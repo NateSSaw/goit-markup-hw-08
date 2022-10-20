@@ -12,6 +12,9 @@ footer {
 }
 
 .block-contacts {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   @include tablet {
     display: flex;
     justify-content: space-around;
@@ -37,8 +40,7 @@ footer {
   }
 }
 
-.footer-contact,
-.block-social {
+.footer-contact {
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
@@ -121,11 +123,11 @@ footer {
 
 .social-pages {
   display: flex;
+  margin: 0;
   @media screen and (max-width: 767px) {
     justify-content: center;
   }
   @include desktop {
-    margin: 0;
   }
   &__item {
     &:not(:last-child) {
@@ -184,7 +186,13 @@ footer {
   &__label {
     display: flex;
     flex-direction: column;
-    margin-right: 12px;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      margin-right: 12px;
+    }
   }
 
   &__input {
@@ -199,10 +207,6 @@ footer {
     background-color: var(--section-background-color);
     color: var(--focus-color);
     transition: border-color var(--time-animation) var(--cubic);
-
-    @media screen and (max-width: 1199px) {
-      margin-bottom: 20px;
-    }
 
     @include tablet {
       margin-left: auto;
