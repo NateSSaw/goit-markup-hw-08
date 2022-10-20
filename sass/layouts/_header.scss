@@ -94,6 +94,7 @@
     padding: 48px 15px 48px 40px;
     background-color: var(--focus-color);
     min-height: 796px;
+    z-index: 5;
 
     &.is-open {
       display: block;
